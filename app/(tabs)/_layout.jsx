@@ -24,6 +24,7 @@ const TabsLayout = () => {
   return (
     <>
       <Tabs
+        // Options for the tab bar that will be displayed at the bottom
         screenOptions={{
           tabBarShowLabel: false, // this will only show the specified label that we have within the (TabIcon) component
           tabBarActiveTintColor: "#FFA001",
@@ -37,7 +38,7 @@ const TabsLayout = () => {
           },
         }}
       >
-        {/* This will create the same tabs that we have within (tabs) */}
+        {/* Creates each screen tab */}
         <Tabs.Screen
           name="home"
           options={{
