@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from "react-native"
-import { Slot, SplashScreen } from "expo-router"
+import { Slot, SplashScreen, Stack } from "expo-router"
 import { useFonts } from "expo-font"
 import { useEffect } from "react"
 
@@ -35,7 +35,16 @@ const RootLayout = () => {
   if (!fontsLoaded && !error) {
     return null
   }
-  return <Slot />
+  // It renders the header with the title "index" and the content of the screen.
+  return (
+    <Stack>
+      <Stack.Screen name="index" options={{ headerShown: false }} />
+      <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      {/* <Stack.Screen name="/search/[query]" options={{ headerShown: false }} /> */}
+    </Stack>
+  )
+  // return <Slot />
 }
 
 export default RootLayout
