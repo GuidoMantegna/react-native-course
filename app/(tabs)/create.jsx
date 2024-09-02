@@ -81,6 +81,8 @@ const Create = () => {
       return Alert.alert("Please provide all fields")
     }
 
+    console.log({ SUSI: user })
+
     setUploading(true)
     try {
       await createVideoPost({

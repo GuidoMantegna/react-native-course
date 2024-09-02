@@ -6,6 +6,7 @@ import { images } from "../../constants"
 import useAppwrite from "../../lib/useAppwrite"
 import { getAllPosts, getLatestPosts } from "../../lib/appwrite"
 import { useGlobalContext } from "../../context/GlobalProvider"
+import { SearchInput, Trending, VideoCard, EmptyState } from "../../components"
 
 const Home = () => {
   const { user } = useGlobalContext()
